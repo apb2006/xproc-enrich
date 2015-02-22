@@ -8,11 +8,14 @@ xproc-plus-time project https://code.google.com/p/xproc-plus-time/
 * augment: add missing (default) ports with @xml:id
 * connect: add @xpt:boundPorts showing links
 
-xmlns:dot="https://github.com/apb2006/xproc-enrich"
+xmlns:xpt="https://github.com/apb2006/xproc-enrich"
 
 ## load from github
 ````
 <p:import href="https://rawgit.com/apb2006/xproc-enrich/master/xproc-enrich.xpl" />
 ````
 
-calabash samples/simple.xpl 
+````
+cd tests
+calabash  -isource=simple.xpl simple.xpl
+```` 
