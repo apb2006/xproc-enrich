@@ -17,9 +17,7 @@
 	<!-- load libraries for signatures -->
 		<xsl:variable name="libs">
 		<p:library>
-			<xsl:for-each select="(//p:import/@href,
-			                     '../signatures/xproc-steps-lib.xpl',
-			                     '../signatures/xmlcalabash_extensions.xml')">
+			<xsl:for-each select="(//p:import/@href,'../signatures/xproc-steps-lib.xpl')">
 			   <xsl:copy-of select="document(.)/p:library/*"/>
 			</xsl:for-each>
 	    </p:library>
