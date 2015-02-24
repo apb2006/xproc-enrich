@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform xmlns:c="http://www.w3.org/ns/xproc-step"
-	xmlns:cx="http://xmlcalabash.com/ns/extensions" xmlns:ml="http://xmlcalabash.com/ns/extensions/marklogic"
-	xmlns:p="http://www.w3.org/ns/xproc" xmlns:xpt="http://xproc-plus-time.googlecode.com"
+	xmlns:cx="http://xmlcalabash.com/ns/extensions"  
+	xmlns:p="http://www.w3.org/ns/xproc" 	xmlns:xpt="https://github.com/apb2006/xproc-enrich" 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	exclude-result-prefixes="cx ml xs xsi" version="2.0">
+	exclude-result-prefixes="cx  xs xsi" version="2.0">
 
 	<xsl:output encoding="UTF-8" indent="yes" media-type="application/xproc+xml"
 		method="xml" />
@@ -35,7 +35,7 @@
 	<xsl:template match="p:declare-step" mode="p:augment">
 		<xsl:copy copy-namespaces="yes">
 			<xsl:namespace name="c">http://www.w3.org/ns/xproc-step</xsl:namespace>
-			<xsl:namespace name="xpt">http://xproc-plus-time.googlecode.com</xsl:namespace>
+			<xsl:namespace name="xpt">https://github.com/apb2006/xproc-enrich</xsl:namespace>
 			<xsl:copy-of select="@*" />
 			<xsl:apply-templates select="* | text()" mode="#current" />
 		</xsl:copy>
